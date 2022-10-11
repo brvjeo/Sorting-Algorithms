@@ -1,12 +1,14 @@
-Array.prototype.selectionSort = function (){
+const selectionSort = array => {
     let min = 0;
 
-    for(let i = 0; i < this.length - 1; i++){
-        for(let j = i + 1; j < this.length; j++){
-            if(this[j] < this[min]) min = j;
+    for(let i = 0; i < array.length - 1; i++){
+        for(let j = i + 1; j < array.length; j++){
+            if(array[j] < array[min]) min = j;
         }
-        [this[i], this[min]] = [this[min], this[i]];
+        [array[i], array[min]] = [array[min], array[i]];
     }
 
-    return this;
+    return array;
 }
+
+module.exports = selectionSort;

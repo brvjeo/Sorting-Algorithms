@@ -1,15 +1,17 @@
-Array.prototype.insertionSort = function (){
-    for(let i = 1; i < this.length; i++){
-        let item = this[i];
+const insertionSort = array => {
+    for(let i = 1; i < array.length; i++){
+        let item = array[i];
         let j = i;
 
-        while (item < this[j - 1] && j){
-            this[j] = this[j-1];
+        while (item < array[j - 1] && j){
+            array[j] = array[j-1];
             j--;
         }
 
-        this[j] = item;
+        array[j] = item;
     }
 
-    return this;
+    return array;
 }
+
+module.exports = insertionSort;

@@ -1,8 +1,10 @@
 const BinaryHeap = require('./assets/BinaryHeap');
 
-Array.prototype.heapSort = function (){
+const heapSort = array => {
     const heap = new BinaryHeap(BinaryHeap.minheap);
-    this.forEach(value => heap.add(value));
+    array.forEach(value => heap.add(value));
 
     return [...heap];
 }
+
+module.exports = heapSort;

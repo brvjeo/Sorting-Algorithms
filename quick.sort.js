@@ -1,6 +1,6 @@
-Array.prototype.quickSort = function () {
-    sort(this, 0, this.length - 1);
-    return this;
+const quickSort = array => {
+    sort(array, 0, array.length - 1);
+    return array;
 
     function sort(array, left, right) {
         if (left < right) {
@@ -25,3 +25,5 @@ Array.prototype.quickSort = function () {
         return less;
     }
 }
+
+module.exports = quickSort;
