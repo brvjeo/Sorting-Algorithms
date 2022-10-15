@@ -1,8 +1,8 @@
-const shakerSort = array => {
+export const shakerSort = (array: number[]): number[] => {
     if (!array.length) return array;
 
-    let left = 0, i;
-    let right = array.length - 1;
+    let left = 0, right = array.length - 1;
+    let i: number;
 
     while (left <= right) {
         for (i = right; i > left; --i) {
@@ -20,6 +20,4 @@ const shakerSort = array => {
     }
 
     return array;
-};
-
-module.exports = shakerSort;
+}
