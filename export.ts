@@ -4,6 +4,8 @@ import {bubbleSort} from "./bubble";
 import {shakerSort} from "./shaker";
 import {insertionSort} from "./insertion";
 
-type SortingObject = Record<string, Function>;
+interface ISortable {
+    [name: string]: (array: number[]) => number[];
+}
 
-export const Sortings: SortingObject = {selectionSort, quickSort, bubbleSort, shakerSort, insertionSort};
+export const Sortings: ISortable = {selectionSort, quickSort, bubbleSort, shakerSort, insertionSort};
